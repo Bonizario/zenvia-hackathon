@@ -1,22 +1,23 @@
 @charset "UTF-8";
-/**
- * Summary:
- *
- *  0. ELEMENT
- *      - 0.1. Body / Typography
- *      - 0.2. Type Elements
-        - 0.3. Header
-        - 0.4. Sidebar
-        - 0.5. Container
-        - 0.6. Pageheader
-        - 0.7. Footer
+/*
+Summary:
+
+0. ELEMENT
+
+    - 0.1. Body / Typography
+    - 0.2. Type Elements
+    - 0.3. Header
+    - 0.4. Sidebar
+    - 0.5. Container
+    - 0.6. Pageheader
+    - 0.7. Footer
 
    -------------------------
 
- *  1. Dashboard
+1. Dashboard
 
- *      - 1.1. TYPE ELEMENT
- *      - 1.2. TYPE ELEMENT
+    - 1.1. TYPE ELEMENT
+    - 1.2. TYPE ELEMENT
 
    --------------------------
 
@@ -39,7 +40,6 @@
     - 2.15. Switch Toogle
     - 2.16. Spinner
 
-
     ----------------------------
 
 3. Charts
@@ -49,8 +49,7 @@
     - 3.3.  Chart.js
     - 3.4.  Morris.js
     - 3.5.  C3 Charts.js
-
-     ----------------------------
+    ----------------------------
 
 4. Forms
 
@@ -61,9 +60,7 @@
     - 4.5.  Input Mask
     - 4.6.  Summar Note text editor
     - 4.7.  Multi Upload
-
-
-     ----------------------------
+    ----------------------------
 
 
 5. Tables
@@ -72,9 +69,7 @@
     - 5.2.  Data Tables
     - 5.3.  Table Filters
 
-
-
-         ----------------------------
+    ----------------------------
 
 
 6. Pages
@@ -93,12 +88,7 @@
     - 6.12.  Shortable / Nestable
     - 6.13.  404 Error
 
-
-
-
-
-
-         ----------------------------
+    ----------------------------
 
 7. Email
 
@@ -107,7 +97,7 @@
     - 7.3.  Email Compose
     - 7.4.  Message Chat
 
-       ----------------------------
+    ----------------------------
 
 
 8. Layouts
@@ -127,9 +117,7 @@
     - 8.13. Collapsible Sidebar
     - 8.14. Sub Navigation
 
-
-
-       ----------------------------
+    ----------------------------
 
 
 9. Maps
@@ -137,23 +125,21 @@
     - 9.1.  Google Map
     - 9.2.  Vector Map
 
-       ----------------------------
+    ----------------------------
 
 
 10. Menu Level
 
     - 10.1.  Level 1
     - 10.2.  Level 2
-   */
+
+==========================================================================
+0. ELEMENT
+==========================================================================
 
 
-/* ==========================================================================
-   0. ELEMENT
-   ========================================================================== */
-
-
-/* 0.1. Body / Typography
-   ========================================================================== */
+0.1. Body / Typography
+========================================================================== */
 
 :root {
   --enfase1: #00b5dd;
@@ -254,12 +240,6 @@ a:hover {
     text-decoration: none;
 }
 
-ol,
-ul {}
-
-ol li,
-ul li {}
-
 .lead {
     font-size: 1.25rem;
     font-weight: 300;
@@ -311,9 +291,7 @@ input[type=file] {
     font-size: 15px;
 }
 
-input {}
 
-button {}
 
 button:focus {
     outline: 0;
@@ -358,13 +336,9 @@ textarea:focus::-webkit-input-placeholder {
     color: #5969ff !important;
 }
 
-button.btn {}
 
-button.btn-default {}
 
-button.btn-primary {}
 
-address {}
 
 .form-group {
     margin-bottom: 12px;
@@ -409,7 +383,6 @@ address {}
     background-color: #5969ff;
 }
 
-.custom-checkbox .custom-control-input:checked~.custom-control-label::after {}
 
 .custom-control-label::after {
     position: absolute;
@@ -1006,7 +979,7 @@ Borders
 }
 
 .text-warning {
-    bcolor: #ffc108 !important;
+    background-color: #ffc108 !important;
 }
 
 .text-info {
@@ -1063,11 +1036,8 @@ Borders
 Fontawesome size
 -------------------------*/
 
-.fa-xl {}
 
-.fa-lg {}
 
-.fa-md {}
 
 .fa-sm {
     font-size: 24px !important;
@@ -1228,9 +1198,7 @@ Legends
     font-size: 14px;
 }
 
-.legend-title {}
 
-.legend-text {}
 
 
 /* ==========================================================================
@@ -1253,6 +1221,7 @@ Top Header
     -webkit-box-shadow: 0px 0px 28px 0px rgba(82, 63, 105, 0.13);
     box-shadow: 0px 0px 28px 0px rgba(82, 63, 105, 0.13);
     -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
     min-height: 60px;
 }
 
@@ -1272,7 +1241,6 @@ Top Header
 .navbar-brand:hover{
     color: #007bff;
 }
-.navbar-right-top {}
 
 .navbar-right-top .nav-item {
     border-right: 1px solid #e6e6f2;
@@ -1300,7 +1268,6 @@ Top Header
 
 /* ------  Notification Dropdown --------  */
 
-.notification {}
 
 .notification-dropdown {
     min-width: 320px;
@@ -1323,7 +1290,6 @@ Top Header
     background-color: #fffffe;
 }
 
-.notification-list {}
 
 .notification-list .list-group-item {
     border-radius: 0px;
@@ -1347,9 +1313,7 @@ Top Header
     background-color: #f7f7fb;
 }
 
-.notification-list .list-group-item:last-child {}
 
-.notification-info {}
 
 .notification-info .notification-date {
     display: block;
@@ -1445,9 +1409,7 @@ Top Header
 
 /* ------  Connection --------  */
 
-.connection {}
 
-.connection-dropdown {}
 
 .connection-list {
     width: 300px;
@@ -1484,7 +1446,6 @@ Top Header
 
 /* ----- User Nav Dropdown -----*/
 
-.nav-user {}
 
 .nav-user-dropdown {
     padding: 0px;
@@ -1492,7 +1453,6 @@ Top Header
     margin: 0px;
 }
 
-.nav-user-name {}
 
 .nav-user-info {
     background-color: #5969ff;
@@ -1509,7 +1469,6 @@ Top Header
     left: 0px;
 }
 
-.nav-user-dropdown {}
 
 .nav-user-dropdown .dropdown-item {
     display: block;
@@ -1587,7 +1546,6 @@ Top Header
     padding: 0px;
 }
 
-.navigation-horizontal .navbar-nav .nav-item {}
 
 .navigation-horizontal .navbar-nav .nav-link {
    font-size: 13px;
@@ -1673,6 +1631,7 @@ Left Navigation Sidebar
     -webkit-box-shadow: 0px 0px 28px 0px rgba(82, 63, 105, 0.13);
     box-shadow: 0px 0px 28px 0px rgba(82, 63, 105, 0.13);
     -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .nav-left-sidebar .nav-link[data-toggle="collapse"] {
@@ -1713,7 +1672,6 @@ Left Navigation Sidebar
     padding: 14px;
 }
 
-.nav-left-sidebar .navbar-nav .nav-item {}
 
 .nav-left-sidebar .navbar-nav .nav-link {
     font-size: 14px;
@@ -1799,7 +1757,6 @@ Leftsidebar - Primary
     color: #8991d4;
 }
 
-.sidebar-primary.nav-left-sidebar .navbar-nav .nav-item {}
 
 .sidebar-primary.nav-left-sidebar .navbar-nav .nav-link {
     color: #8991d4;
@@ -1835,6 +1792,7 @@ Leftsidebar - dark
     -webkit-box-shadow: 0px 0px 28px 0px rgba(82, 63, 105, 0.13);
     box-shadow: 0px 0px 28px 0px rgba(82, 63, 105, 0.13);
     -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .sidebar-dark .nav-divider {
@@ -1847,7 +1805,6 @@ Leftsidebar - dark
     color: #7a80b4;
 }
 
-.sidebar-dark.nav-left-sidebar .navbar-nav .nav-item {}
 
 .sidebar-dark.nav-left-sidebar .navbar-nav .nav-link {
     color: #7a80b4;
@@ -1891,9 +1848,7 @@ Sidebar Page Navigations
     top: 5rem;
 }
 
-.sidebar-nav-fixed ul {}
 
-.sidebar-nav-fixed ul li {}
 
 .sidebar-nav-fixed ul li a {
     font-size: 14px;
@@ -1943,7 +1898,6 @@ Sidebar Page Navigations
     background: #efeff6;
 }
 
-.page-section {}
 
 .dropdown-item.active,
 .dropdown-item:active {
@@ -2027,11 +1981,8 @@ Pageheader
     margin-bottom: 30px;
 }
 
-.page-breadcrumb {}
 
-.page-breadcrumb .breadcrumb {}
 
-.page-breadcrumb .breadcrumb-item {}
 
 .page-breadcrumb .breadcrumb-link {
     color: #a6a6b7;
@@ -2095,7 +2046,6 @@ Pageheader
     /*position: absolute; bottom: 0;*/
 }
 
-.footer-links {}
 
 .footer .footer-links a {
     color: #71748d;
@@ -2132,7 +2082,6 @@ Pageheader
   2. Dashboard Index-Finance
    ========================================================================== */
 
-.dashboard-finance {}
 
 .dashboard-finance .ct-label {
     display: none;
@@ -2143,9 +2092,7 @@ Pageheader
   3. Dashboard Influencer
    ========================================================================== */
 
-.dashboard-influence {}
 
-.influencer-profile-data {}
 
 .influencer-profile-data .user-avatar {
     margin-right: 40px;
@@ -2161,9 +2108,7 @@ Pageheader
     padding-right: 20px;
 }
 
-.user-avatar-address {}
 
-.influencer-profile-data .user-avatar-address {}
 
 .influencer-profile-data .user-avatar-email {
     text-decoration: underline;
@@ -2190,7 +2135,6 @@ Pageheader
     background-color: #ededfa;
 }
 
-.campaign-table {}
 
 .campaign-table .dropdown-toggle::after {
     display: none;
@@ -2205,14 +2149,12 @@ Pageheader
     margin-bottom: 25px;
 }
 
-.campaign-info {}
 
 
 /* ==========================================================================
   3. Influencer Finder
    ========================================================================== */
 
-.influence-finder {}
 
 .influence-finder .user-social-media {
     padding: 16px 68px;
@@ -2250,7 +2192,6 @@ Pageheader
  4. Influencer Profile
 ========================================================================== */
 
-.influence-profile {}
 
 .rating-star {
     font-size: 12px;
@@ -2282,21 +2223,17 @@ Pageheader
     border-top-left-radius: 0px;
 }
 
-.review-block {}
 
-.review-text {}
 
 
 /* ==========================================================================
   5. Dashboard Ecommerce
    ========================================================================== */
 
-.dashboard-ecommerce {}
 
 
 /* -------------- social sales -------------------*/
 
-.social-sales {}
 
 .social-sales-icon-circle {
     height: 40px;
@@ -2308,9 +2245,7 @@ Pageheader
     display: inline-block;
 }
 
-.social-sales-content {}
 
-.social-sales-name {}
 
 .social-sales-count {
     float: right;
@@ -2320,13 +2255,11 @@ Pageheader
 
 /* -------------- traffic sales -------------------*/
 
-.traffic-sales {}
 
 .traffic-sales-content {
     padding: 20px !important;
 }
 
-.traffic-sales-name {}
 
 .traffic-sales-amount {
     float: right;
@@ -2336,7 +2269,6 @@ Pageheader
 
 /* -------------- country sales -------------------*/
 
-.country-sales {}
 
 .country-sales-content {
     padding: 20px !important;
@@ -2389,7 +2321,6 @@ clip-path: polygon(10% 25%, 10% 0, 35% 0%, 65% 0%, 90% 0, 90% 25%, 90% 50%, 91% 
 
     color: #ffa811;}
 .product-price{ position: absolute; top: 0; right: 0; font-size: 16px; color: #3d405c;font-family: 'Circular Std Medium'; line-height: 1;}
-.product-btn{}
 .product-del{font-size: 14px; color: #71748d;}
 .product-sidebar{ background-color: #fff; border:1px solid #e6e6f2;  }
 .product-sidebar-widget{border-bottom: 1px solid #e6e6f2; padding: 10px 20px; margin-bottom: 10px;}
@@ -2410,7 +2341,6 @@ clip-path: polygon(10% 25%, 10% 0, 35% 0%, 65% 0%, 90% 0, 90% 25%, 90% 50%, 91% 
 
 
 .product-slider{background-color: #fff;  border-top-left-radius: 4px; border-bottom-left-radius: 4px; padding: 110px;}
-.product-carousel{}
 .product-carousel .carousel-indicators {
     position: absolute;
     right: 0;
@@ -2451,7 +2381,6 @@ clip-path: polygon(10% 25%, 10% 0, 35% 0%, 65% 0%, 90% 0, 90% 25%, 90% 50%, 91% 
     padding: 0;
     display: none;
 }
-.product-description{}
 
 
 .product-colors label {
@@ -3243,22 +3172,18 @@ btn-link
     border-bottom: 1px solid #e6e6f2;
 }
 
-.card-title {}
 
 .card-subtitle {
     font-size: 14px;
 }
 
-.card-body {}
 
-.card-text {}
 
 .card-footer {
     border-top: 1px solid #e6e6f2;
     background: #f6f6ff;
 }
 
-.card-link {}
 
 .toolbar {
     font-size: 18px;
@@ -3269,11 +3194,8 @@ btn-link
     line-height: 2;
 }
 
-.card-toolbar-tabs {}
 
-.card-toolbar-tabs .nav.nav-pills {}
 
-.card-toolbar-tabs .nav.nav-pills .nav-item {}
 
 .card-toolbar-tabs .nav.nav-pills .nav-item .nav-link {
     font-size: 14px;
@@ -3464,9 +3386,7 @@ btn-link
 
 /*------------------------- Card Navigation --------------------------*/
 
-.card-header-tabs {}
 
-.card-header-pills {}
 
 .pills-regular .card-header-pills.nav.nav-pills .nav-item .nav-link.active {
     background-color: #5969ff;
@@ -3550,11 +3470,8 @@ btn-link
     border-radius: 100%;
 }
 
-.icon-box {}
 
-.icon-box-xxl {}
 
-.icon-box-xl {}
 
 .icon-box-lg {
     height: 68px;
@@ -3566,7 +3483,6 @@ btn-link
     width: 32px;
 }
 
-.icon-box-sm {}
 
 .icon-box-xs {
     height: 20px;
@@ -3578,13 +3494,11 @@ btn-link
 2.8  Tabs
 -------------------------*/
 
-.tab-regular {}
 
 .tab-regular .nav.nav-tabs {
     border-bottom: transparent;
 }
 
-.tab-regular .nav.nav-tabs .nav-item {}
 
 .tab-regular .nav.nav-tabs .nav-link {
     display: block;
@@ -3596,7 +3510,6 @@ btn-link
 }
 
 .tab-regular .nav-tabs .nav-link:focus,
-.nav-tabs .nav-link:hover {}
 
 .tab-regular .nav-tabs .nav-link.active {
     background-color: #fff;
@@ -3615,7 +3528,6 @@ btn-link
 
 /*----- Tabs Vertical CSS ----*/
 
-.tab-vertical {}
 
 .tab-vertical .nav.nav-tabs {
     float: left;
@@ -3665,7 +3577,6 @@ btn-link
 
 /*----- Tabs Outline CSS ----*/
 
-.tab-outline {}
 
 .tab-outline .nav.nav-tabs {
     border-bottom: transparent;
@@ -3680,7 +3591,6 @@ btn-link
     margin-right: 3px;
 }
 
-.tab-outline .nav.nav-tabs .nav-item {}
 
 .tab-outline .nav-tabs .nav-link.active {
     color: #5969ff !important;
@@ -3704,7 +3614,6 @@ btn-link
 
 /*----- Tabs Vertical Outline CSS ----*/
 
-.tab-vertical-outline {}
 
 .tab-vertical-outline .nav.nav-tabs {
     float: left;
@@ -3770,7 +3679,6 @@ btn-link
     border-bottom: 1px solid #e6e6f2;
 }
 
-.simple-card .nav.nav-tabs .nav-item {}
 
 .simple-card .nav.nav-tabs .nav-item .nav-link {
     padding: 17px 49px;
@@ -3804,7 +3712,6 @@ btn-link
     border-bottom: 1px solid #c4c4cf;
 }
 
-.simple-outline-card .nav.nav-tabs .nav-item {}
 
 .simple-outline-card .nav.nav-tabs .nav-item .nav-link {
     padding: 17px 49px;
@@ -3831,11 +3738,8 @@ btn-link
 Pills Regular
 -------------------------*/
 
-.pills-regular {}
 
-.pills-regular .nav.nav-pills {}
 
-.pills-regular .nav.nav-pills .nav-item {}
 
 .pills-regular .nav.nav-pills .nav-item .nav-link {
     background-color: #dddde8;
@@ -3862,11 +3766,8 @@ Pills Regular
 Pills Outline
 -------------------------*/
 
-.pills-outline {}
 
-.pills-outline .nav.nav-pills {}
 
-.pills-outline .nav.nav-pills .nav-item {}
 
 .pills-outline .nav.nav-pills .nav-item .nav-link {
     background-color: transparent;
@@ -3893,9 +3794,7 @@ Pills Outline
 Pills vertical
 -------------------------*/
 
-.pills-vertical {}
 
-.pills-vertical .nav.nav-pills {}
 
 .pills-vertical .nav.nav-pills .nav-link {
     background-color: #dddde8;
@@ -3920,7 +3819,6 @@ Pills vertical
 2.9  Accordions
 -------------------------*/
 
-.accrodion-regular {}
 
 .accrodion-regular .card {
     margin-bottom: 5px;
@@ -3950,7 +3848,6 @@ Pills vertical
     text-decoration: none;
 }
 
-.accrodion-outline {}
 
 .accrodion-outline .card {
     margin-bottom: 5px;
@@ -4127,7 +4024,6 @@ Pills vertical
     text-decoration: none;
 }
 
-.dashboard-badges {}
 
 .badge-dot {
     border-radius: 100%;
@@ -4457,7 +4353,7 @@ Pills vertical
 }
 
 .spark-chart-info {
-    display: inline-block;
+    display: block;
     float: right;
 }
 
@@ -4824,13 +4720,10 @@ Vertical Timeline - by CodyHouse.co
     border-right: 7px solid white;
 }
 
-.cd-timeline__content h2 {}
 
 .cd-timeline__content p,
 .cd-timeline__read-more,
-.cd-timeline__date {}
 
-.cd-timeline__content p {}
 
 .cd-timeline__read-more,
 .cd-timeline__date {
@@ -4853,13 +4746,6 @@ Vertical Timeline - by CodyHouse.co
     float: left;
     padding: .8em 0;
     opacity: .7;
-}
-
-@media only screen and (min-width:768px) {
-    .cd-timeline__content h2 {}
-    .cd-timeline__content p {}
-    .cd-timeline__read-more,
-    .cd-timeline__date {}
 }
 
 @media only screen and (min-width:1170px) {
@@ -5331,7 +5217,6 @@ Vertical Timeline - by CodyHouse.co
 6.12 Shortable / Nesetable
 -------------------------*/
 
-.dashboard-short-list {}
 
 .drag-handle,
 .drag-indicator {
@@ -5532,11 +5417,8 @@ Vertical Timeline - by CodyHouse.co
     -moz-box-sizing: border-box;
 }
 
-#nestable2 .dd-handle {}
 
-#nestable2 .dd-handle:hover {}
 
-#nestable2 .dd-item>button:before {}
 
 .dd-hover>.dd-handle {
     background: #5969ff !important;
@@ -5825,7 +5707,6 @@ Vertical Timeline - by CodyHouse.co
     position: relative;
 }
 
-.aside-header {}
 
 .aside-header .navbar-toggle {
     background: 0 0;
@@ -6332,9 +6213,6 @@ Vertical Timeline - by CodyHouse.co
 }
 .chat-module {
     height: calc(100vh - 105px);
-}
-.dashboard-main-wrapper .content-container>.chat-module {
-    /*height: 100%;*/
 }
 
 .dashboard-main-wrapper .content-container>.chat-module {
@@ -6898,7 +6776,6 @@ Media Query
 
 }
 
-
 /* Extra Small Devices, Phones */
 
 @media only screen and (max-width:480px) {
@@ -6998,9 +6875,3 @@ Media Query
 .simple-card .nav.nav-tabs .nav-item .nav-link {
     padding: 17px 29px;}
 }
-
-
-
-
-/* Custom, iPhone Retina */
-@media only screen and (max-width:320px) {}
