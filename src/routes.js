@@ -4,6 +4,7 @@ const routes = express.Router();
 
 routes.get('/', ProductController.index);
 
-routes.get('/test', ProductController.search);
+routes.get('/oferecer', ProductController.oferecer);
+routes.get('/procurar', ProductController.procurar);
 
 module.exports = routes;
