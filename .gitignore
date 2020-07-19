@@ -7,3 +7,6 @@ yarn.lock
 
 # Database
 **/*.db
+
+# Tmp
+tmp.js

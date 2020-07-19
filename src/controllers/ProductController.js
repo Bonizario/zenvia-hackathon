@@ -2,17 +2,15 @@ const unidecode = require('unidecode');
 const fuzzball = require('fuzzball');
 require('dotenv').config();
 
-// const api = require('../api');
+const api = require('../api');
 const db = require('../db');
 const key = process.env.DISTANCE_MATRIX_API_KEY;
 
 const unidecodeAndClean = str =>
   unidecode(str)
+    .trim()
     .replace(/([!*'();:@&=+$,/?%#\[\]])/g, '')
     .toLowerCase();
-
-const cleanAddress = str =>
-  unidecodeAndClean(str).replace(/(\d{5}-\d{3}){1}/g, '');
 
 module.exports = {
   index(req, res) {
@@ -22,22 +20,23 @@ module.exports = {
     // Reading values from the request body
 
     // let {
-    //   nome: name,
+    //   telefone: telephone,
     //   oferta_procura: objective,
     //   endereco_com_cep: address,
     //   prod_serv_estab: action
     // } = req.body;
 
-    let { name, objective, origin, action } = {
+    let { name, objective, origin, action, tag } = {
       name: 'Rogério Marques',
       objective: 'Procurar produto',
       origin: 'Av. da Saudade, 1411, Uberaba, 38061-000',
       action: 'Quero cortar meu cabelo',
+      tag: 'cabeleireiro',
     };
 
     name = unidecodeAndClean(name);
     objective = unidecodeAndClean(objective);
-    origin = cleanAddress(origin);
+    origin = unidecodeAndClean(origin);
     action = unidecodeAndClean(action);
 
     // Debug
@@ -48,18 +47,18 @@ module.exports = {
       // Chamada à API do Thales, recebe a tag
       // Inserting values in the database
       const query = `
-        INSERT INTO searches (
-          name,
+        INSERT INTO offers (
+          telephone,
           objective,
           origin,
           action,
           tag
-        ) VALUES (?,?,?,?);
+        ) VALUES (?,?,?,?,?);
       `;
 
       db.run(query, [name, objective, origin, action, tag], function (err) {
         if (err) {
-          return console.log(err.message);
+          return console.error(err.message);
         }
 
         console.log(`A row has been inserted with rowid ${this.lastID}`);
@@ -68,11 +67,28 @@ module.exports = {
       db.close();
     } else if (objective.includes('procurar')) {
       // Chamada à API do Thales
-      let destinations = [
-        'R. Goiás, 1007 - Santa Maria, Uberaba - MG, 38050-060',
-        'Av. Afrânio Azevedo, 707 - Santa Maria, Uberaba - MG, 38050-110',
-      ];
-      destinations = destinations.map(cleanAddress);
+      const query = `
+        SELECT origin
+        FROM offers
+      `;
+
+      let destinations = [];
+      db.each(query, function (err, row) {
+        if (err) {
+          return console.error(err.message);
+        }
+
+        destinations.push(row.origin);
+      });
+
+      console.log(destinations);
+      db.close();
+
+      // let destinations = [
+      //   'R. Goiás, 1007 - Santa Maria, Uberaba - MG, 38050-060',
+      //   'Av. Afrânio Azevedo, 707 - Santa Maria, Uberaba - MG, 38050-110',
+      // ];
+      // destinations = destinations.map(unidecodeAndClean);
     } else {
       return res.json({ message: 'Um erro ocorreu!' });
     }

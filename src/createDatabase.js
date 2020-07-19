@@ -7,7 +7,7 @@ db.serialize(() => {
   db.run(`
     CREATE TABLE IF NOT EXISTS searches (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
-      name VARCHAR(255),
+      telephone VARCHAR(255),
       objective VARCHAR(255),
       origin VARCHAR(255),
       action VARCHAR(255),
@@ -18,7 +18,7 @@ db.serialize(() => {
   db.run(`
     CREATE TABLE IF NOT EXISTS offers (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
-      name VARCHAR(255),
+      telephone VARCHAR(255),
       objective VARCHAR(255),
       origin VARCHAR(255),
       action VARCHAR(255),
