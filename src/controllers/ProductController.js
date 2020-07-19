@@ -20,20 +20,12 @@ module.exports = {
   },
   async oferecer(req, res) {
     // Reading values from the request body
-
-    // let {
-    //   telefone: telephone,
-    //   oferta_procura: objective,
-    //   endereco_com_cep: address,
-    //   prod_serv_estab: action
-    // } = req.body;
-
-    let { telephone, objective, origin, action } = {
-      telephone: '34123451234',
-      objective: 'Oferecer produto',
-      origin: 'Av. da Saudade, 1411, Uberaba, 38061-000',
-      action: 'Costuro blusas.',
-    };
+    let {
+      telefone: telephone,
+      oferta_procura: objective,
+      endereco_com_cep: origin,
+      prod_serv_estab: action,
+    } = req.body;
 
     telephone = unidecodeAndClean(telephone);
     objective = unidecodeAndClean(objective);
@@ -44,10 +36,11 @@ module.exports = {
     // console.log(name, objective, origin, action);
     // destinations.forEach(console.log);
 
-    // Chamada à API do Thales, recebe a tag
+    // Thales API
     const tag = await axios
       .get(`http://tfreitaz.pythonanywhere.com/classificar/${action}`)
-      .then(response => response.data.tag);
+      .then(response => response.data.tag)
+      .catch(err => console.error(err));
 
     // Inserting values in the database
     const query = `
@@ -71,12 +64,13 @@ module.exports = {
     });
   },
   async procurar(req, res) {
-    let { telephone, objective, origin, action } = {
-      telephone: '34123451234',
-      objective: 'Procurar produto',
-      origin: 'Rua Araguari, 777, Uberaba',
-      action: 'Gostaria de comprar bolos e tortas.',
-    };
+    // Reading values from the request body
+    let {
+      telefone: telephone,
+      oferta_procura: objective,
+      endereco_com_cep: origin,
+      prod_serv_estab: action,
+    } = req.body;
 
     telephone = unidecodeAndClean(telephone);
     objective = unidecodeAndClean(objective);
