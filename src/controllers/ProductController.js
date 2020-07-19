@@ -128,8 +128,14 @@ module.exports = {
               // return response.rows[0].elements;
               return response.data.rows[0].elements;
             });
+
+            
+
+
+
           console.log('Google response', distances);
         });
+
       } else if (addresses.length === 1) {
         // Inserting values in the database
         const query = `
@@ -166,24 +172,45 @@ module.exports = {
             },
           });
         });
+
       } else if (addresses.length >= 1) {
-        return res.json({
-          data: {
-            Resultado1: {
-              Distancia: '--',
-              Empresa: addresses[0].action,
-              Endereco: addresses[0].origin,
-              Telefone: addresses[0].telephone,
-            },
-            Resultado2: {
-              Distancia: '--',
-              Empresa: addresses[1].action,
-              Endereco: addresses[1].origin,
-              Telefone: addresses[1].telephone,
-            },
-          },
+        const query = `
+        INSERT INTO searches (
+          telephone,
+          objective,
+          origin,
+          action,
+          tag
+        ) VALUES (?,?,?,?,?);
+        `;
+        console.log([telephone, objective, origin, action, tag]);
+
+        db.run(
+          query, // query
+          [telephone, objective, origin, action, tag], // values
+          function (err) { // callback
+            if (err) {
+              return console.error(err.message);
+            }
+            return res.json({
+              data: {
+                Resultado1: {
+                  Distancia: '--',
+                  Empresa: addresses[0].action,
+                  Endereco: addresses[0].origin,
+                  Telefone: addresses[0].telephone,
+                },
+                Resultado2: {
+                  Distancia: '--',
+                  Empresa: addresses[1].action,
+                  Endereco: addresses[1].origin,
+                  Telefone: addresses[1].telephone,
+                },
+              }
+            })
         });
       }
+
     });
   },
 };
