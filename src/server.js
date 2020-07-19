@@ -5,6 +5,7 @@ const routes = require('./routes');
 
 const server = express();
 
+server.use(express.json());
 server.use(cors());
 server.use(routes);
 server.use(express.urlencoded({ extended: true }));
