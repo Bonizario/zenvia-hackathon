@@ -6,9 +6,6 @@ package-lock.json
 # .env
 **/*.env
 
-# Database
-**/*.db
-
 # Tmp
 tmp.js
 test.js
